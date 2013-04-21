@@ -5,10 +5,10 @@ var express = require('express');
 
 var Crawler = require('./search').Crawler;
 
-var Crawler_360 = require('./search-360').Crawler_360;
-var Crawler_etao = require('./search-360').Crawler_etao;
-var Crawler_google = require('./search-sohu').Crawler_google;
-var Crawler_sohu = require('./search-sohu').Crawler_sohu;
+var Crawler_360     = require('./search-360').Crawler_360;
+var Crawler_etao    = require('./search-360').Crawler_etao;
+var Crawler_google  = require('./search-sohu').Crawler_google;
+var Crawler_sohu    = require('./search-sohu').Crawler_sohu;
 
 Crawler.init(new Crawler_360(), new Crawler_etao(), new Crawler_google(), new Crawler_sohu());
 
