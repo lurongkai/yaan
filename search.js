@@ -22,7 +22,7 @@ Crawler.register = function(_c){
 Crawler.init = function(crawlers){
   crawlers.forEach(function(crawler){
     Crawler.workers.push(crawler);
-  }
-}
+  });
+};
 
 module.exports.Crawler = Crawler;
