@@ -4,12 +4,13 @@ var wechat = require('wechat');
 var express = require('express');
 
 var Crawler = require('./search').Crawler;
-var Crawler_360 = require('./search').Crawler_360;
 
-var c_360 = new Crawler_360();
-Crawler.register(c_360);
+var Crawler_360 = require('./search-360').Crawler_360;
+var Crawler_etao = require('./search-360').Crawler_etao;
+var Crawler_google = require('./search-sohu').Crawler_google;
+var Crawler_sohu = require('./search-sohu').Crawler_sohu;
 
-
+Crawler.init(new Crawler_360(), new Crawler_etao(), new Crawler_google(), new Crawler_sohu());
 
 var app = express();
 app.use(express.query());
